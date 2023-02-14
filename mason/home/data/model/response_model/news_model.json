@@ -1,17 +1,16 @@
 {
   "app": "news_app",
-  "feature":"home",
+  "feature": "home",
   "name": "news_model",
   "response_model": false,
-  "parameters": [ 
+  "parameters": [
     {
       "parameter": "id",
       "field": "id",
       "type": "String",
       "custom": false,
       "list": false,
-      "fake_id":true,
-      
+      "fake_id": true
     },
     {
       "parameter": "titleAr",
@@ -19,8 +18,7 @@
       "type": "String",
       "custom": false,
       "list": false,
-      "fake_word":true,
-      
+      "fake_word": true
     },
     {
       "parameter": "titleEn",
@@ -28,8 +26,7 @@
       "type": "String",
       "custom": false,
       "list": false,
-      "fake_word":true,
-      
+      "fake_word": true
     },
     {
       "parameter": "contentAr",
@@ -37,8 +34,7 @@
       "type": "String",
       "custom": false,
       "list": false,
-      "fake_sentence":true,
-      
+      "fake_sentence": true
     },
     {
       "parameter": "contentEn",
@@ -46,8 +42,7 @@
       "type": "String",
       "custom": false,
       "list": false,
-      "fake_sentence":true,
-      
+      "fake_sentence": true
     },
     {
       "parameter": "image",
@@ -55,8 +50,7 @@
       "type": "String",
       "custom": false,
       "list": false,
-      "fake_image":true,
-      
+      "fake_image": true
     },
     {
       "parameter": "createdAt",
@@ -64,8 +58,7 @@
       "type": "DateTime",
       "custom": false,
       "list": false,
-      "fake_dateTime":true,
-      
-    },
+      "fake_dateTime": true
+    }
   ]
 }

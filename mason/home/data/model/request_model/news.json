@@ -9,7 +9,7 @@
       "type": "int",
       "nullable": false,
       "custom": false,
-      
+
       "paths": []
     },
     {
@@ -18,8 +18,8 @@
       "type": "int",
       "nullable": false,
       "custom": false,
-      
+
       "paths": []
-    },
+    }
   ]
 }

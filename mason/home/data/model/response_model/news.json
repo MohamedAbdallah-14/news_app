@@ -1,17 +1,15 @@
 {
   "app": "news_app",
-  "feature":"home",
+  "feature": "home",
   "name": "news",
   "response_model": true,
-  "parameters": [ 
+  "parameters": [
     {
       "parameter": "news",
       "field": "list",
       "type": "NewsModel",
       "custom": true,
-      "list": true,
-      
-      
-    },
+      "list": true
+    }
   ]
 }
