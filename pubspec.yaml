@@ -9,12 +9,19 @@ environment:
 
 dependencies:
   bloc: ^8.1.1
+  dartz: ^0.10.1
+  dio: ^4.0.6
+  equatable: ^2.0.5
+  faker: ^2.1.0
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
+  logger: ^1.1.0
+  path_provider: ^2.0.12
+  pretty_dio_logger: ^1.1.1
 
 dev_dependencies:
   bloc_test: ^9.1.1
