@@ -38,7 +38,7 @@ class NewsModel extends Equatable {
         'content_ar': contentAr,
         'content_en': contentEn,
         'image': image,
-        'createdAt': createdAt,
+        'createdAt': createdAt.toString(),
       };
 
   @override
