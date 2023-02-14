@@ -25,6 +25,8 @@ dependencies:
 
 dev_dependencies:
   bloc_test: ^9.1.1
+  build_runner:
+  flutter_gen_runner:
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0
@@ -33,3 +35,14 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/images/
+
+
+flutter_gen:
+  output: lib/generated/
+  assets:
+    outputs:
+      style: camel-case
+  integrations:
+    flutter_svg: true
