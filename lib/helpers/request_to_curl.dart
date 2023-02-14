@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:news_app/data/api_manager/models/request/request.dart';
+import 'package:news_app/data/api_manager/api_manager.dart';
 import 'package:news_app/helpers/app_logger.dart';
 
 Future<String?> request2curl(Request? request) async {

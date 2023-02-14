@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:intl/intl.dart';
 import 'package:news_app/data/api_manager/models/failures/failure.dart';
 import 'package:news_app/data/api_manager/models/failures/failure_info.dart';
-import 'package:news_app/data/api_manager/models/request/request.dart';
+import 'package:news_app/data/api_manager/models/request/request_mixin.dart';
 import 'package:news_app/helpers/dio2curl.dart';
 import 'package:news_app/helpers/request_to_curl.dart';
 import 'package:path_provider/path_provider.dart';

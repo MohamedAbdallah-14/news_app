@@ -1,4 +1,4 @@
-import 'package:news_app/data/api_manager/models/request/request.dart';
+import 'package:news_app/data/api_manager/models/request/request_mixin.dart';
 import 'package:news_app/data/api_manager/models/request_model.dart';
 
 mixin DeleteRequest on Request {

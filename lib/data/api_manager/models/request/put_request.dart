@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:news_app/data/api_manager/models/request/request.dart';
+import 'package:news_app/data/api_manager/models/request/request_mixin.dart';
 
 mixin PutRequest on Request {
   @override

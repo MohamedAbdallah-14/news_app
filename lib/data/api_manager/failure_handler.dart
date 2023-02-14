@@ -14,9 +14,9 @@ import 'package:news_app/data/api_manager/models/failures/session_ended_failure.
 import 'package:news_app/data/api_manager/models/failures/type_failure.dart';
 import 'package:news_app/data/api_manager/models/failures/unkown_failure.dart';
 import 'package:news_app/data/api_manager/models/failures/validation_failure.dart';
-import 'package:news_app/data/api_manager/models/request/request.dart';
+import 'package:news_app/data/api_manager/models/request/request_mixin.dart';
 import 'package:news_app/data/api_manager/status_checker/http_codes.dart';
-import 'package:news_app/data/api_manager/status_checker/status_checker.dart';
+import 'package:news_app/data/api_manager/status_checker/status_checker_implementation.dart';
 
 class FailureHandler {
   FailureHandler();

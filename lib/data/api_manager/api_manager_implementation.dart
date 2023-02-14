@@ -5,10 +5,10 @@ import 'package:news_app/data/api_manager/models/exceptions/error_exception.dart
 import 'package:news_app/data/api_manager/models/exceptions/server_exception.dart';
 import 'package:news_app/data/api_manager/models/failures/failure.dart';
 import 'package:news_app/data/api_manager/models/message_response_model.dart';
-import 'package:news_app/data/api_manager/models/request/request.dart';
+import 'package:news_app/data/api_manager/models/request/request_mixin.dart';
 import 'package:news_app/data/api_manager/models/response_model.dart';
 import 'package:news_app/data/api_manager/status_checker/http_codes.dart';
-import 'package:news_app/data/api_manager/status_checker/status_checker.dart';
+import 'package:news_app/data/api_manager/status_checker/status_checker_implementation.dart';
 import 'package:news_app/helpers/app_logger.dart';
 import 'package:news_app/helpers/dio2curl.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
