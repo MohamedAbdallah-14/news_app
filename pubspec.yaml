@@ -18,6 +18,7 @@ dependencies:
   flutter_bloc: ^8.1.2
   flutter_localizations:
     sdk: flutter
+  get_it: ^7.2.0
   intl: ^0.17.0
   logger: ^1.1.0
   path_provider: ^2.0.12
@@ -25,8 +26,8 @@ dependencies:
 
 dev_dependencies:
   bloc_test: ^9.1.1
-  build_runner:
-  flutter_gen_runner:
+  build_runner: null
+  flutter_gen_runner: null
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0
@@ -38,7 +39,6 @@ flutter:
   assets:
     - assets/images/
     - assets/images/naviagtion
-
 
 flutter_gen:
   output: lib/generated/
