@@ -1,0 +1,7 @@
+{
+    "@@locale": "ar",
+    "counterAppBarTitle": "عداد",
+    "@counterAppBarTitle": {
+        "description": "وصف عداد"
+    }
+}
