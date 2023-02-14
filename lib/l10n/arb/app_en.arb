@@ -1,7 +1,11 @@
 {
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    }
+  "@@locale": "en",
+  "error": "Error",
+  "success": "Success",
+  "no_connection": "Connection Error",
+  "service_not_available": "Service Not Available",
+  "check_your_connection": "Check your connection and try again.",
+  "try_again_later": "Please try again later",
+  "retry": "Retry",
+  "dismiss": "Dismiss"
 }

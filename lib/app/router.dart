@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/home/view/router.dart';
-import 'package:news_app/home/view/splash.dart';
+import 'package:news_app/home/view/splash/splash.dart';
 
 class AppRouter {
   AppRouter._();
