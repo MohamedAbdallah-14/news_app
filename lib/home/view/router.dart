@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/home/data/model/news_model/news_model.dart';
 import 'package:news_app/home/logic/home_cubit/home_cubit.dart';
 import 'package:news_app/home/view/home_screen/home_screen.dart';
 import 'package:news_app/home/view/news_screen/news_screen.dart';
@@ -24,7 +25,9 @@ class HomeRouter {
         );
       case NewsScreen.id:
         return MaterialPageRoute(
-          builder: (_) => const NewsScreen(),
+          builder: (_) => NewsScreen(
+            newsModel: routeSettings.arguments! as NewsModel,
+          ),
           settings: routeSettings,
         );
       default:

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/app/view/widgets/image_loader.dart';
 import 'package:news_app/helpers/app_colors.dart';
 import 'package:news_app/home/logic/news/news_cubit.dart';
+import 'package:news_app/l10n/l10n.dart';
 
 class HomeNewsCell extends StatelessWidget {
   const HomeNewsCell({super.key});
@@ -30,16 +31,15 @@ class HomeNewsCell extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                newsModel.titleAr,
+                context.l10n.sport_league,
                 style: const TextStyle(
                   color: AppColors.brownishGrey,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
-                maxLines: 1,
               ),
               Text(
-                newsModel.contentAr,
+                newsModel.titleAr,
                 style: const TextStyle(
                   color: AppColors.black,
                   fontWeight: FontWeight.w700,
