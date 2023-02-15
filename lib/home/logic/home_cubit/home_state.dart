@@ -18,7 +18,7 @@ class HomeState extends Equatable {
       case NavigationTabs.statistics:
         return const NotImplementedTab();
       case NavigationTabs.more:
-        return const NotImplementedTab();
+        return const MoreTab();
     }
   }
 

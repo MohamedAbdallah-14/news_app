@@ -5,6 +5,7 @@ import 'package:news_app/generated/assets.gen.dart';
 import 'package:news_app/helpers/alert.dart';
 import 'package:news_app/helpers/app_colors.dart';
 import 'package:news_app/home/data/model/news_model/news_model.dart';
+import 'package:news_app/home/logic/language_cubit/language_cubit.dart';
 import 'package:news_app/l10n/l10n.dart';
 
 class NewsScreen extends StatelessWidget {
@@ -53,7 +54,7 @@ class NewsScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        newsModel.titleAr,
+                        newsModel.title(ltr: ltr),
                         style: const TextStyle(
                           color: AppColors.black,
                           fontWeight: FontWeight.w700,
@@ -80,7 +81,7 @@ class NewsScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        newsModel.contentAr,
+                        newsModel.content(ltr: ltr),
                         style: const TextStyle(
                           color: AppColors.darkGrey,
                           fontWeight: FontWeight.w400,
