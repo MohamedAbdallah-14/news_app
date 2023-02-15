@@ -11,7 +11,7 @@ class AppScreen extends StatelessWidget {
 
   final Widget? child;
   final Widget? bottomNavigationBar;
-  final AppBar? appBar;
+  final PreferredSizeWidget? appBar;
   final Color? backgroundColor;
 
   @override
