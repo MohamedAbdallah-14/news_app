@@ -10,7 +10,7 @@ class NewsResponseModel extends Equatable implements ResponseModel {
   factory NewsResponseModel.fromMap(Map<String, dynamic> map) {
     return NewsResponseModel(
       news: List<NewsModel>.from(
-        (map['list'] as List<dynamic>).map(
+        ((map['list'] ?? <dynamic>[]) as List<dynamic>).map(
           (e) => NewsModel.fromMap(
             e as Map<String, dynamic>,
           ),

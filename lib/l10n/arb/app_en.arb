@@ -14,5 +14,7 @@
   "table": "Table",
   "news": "News",
   "statistics": "Statistics",
-  "not_implemented": "This Feature is not implemented yet."
+  "not_implemented": "This Feature is not implemented yet.",
+  "no_news": "No News yets.",
+  "sport_league": "Sports League"
 }

@@ -1,107 +1,100 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/dependacy_injection/di.dart';
+import 'package:news_app/app/view/widgets/app_screen.dart';
+import 'package:news_app/app/view/widgets/image_loader.dart';
+import 'package:news_app/generated/assets.gen.dart';
+import 'package:news_app/helpers/alert.dart';
 import 'package:news_app/helpers/app_colors.dart';
-import 'package:news_app/helpers/generic_error_handler.dart';
-import 'package:news_app/helpers/loader.dart';
-import 'package:news_app/home/logic/news/news_cubit.dart';
-import 'package:news_app/home/view/news_screen/widgets/news_cell.dart';
+import 'package:news_app/home/data/model/news_model/news_model.dart';
+import 'package:news_app/l10n/l10n.dart';
 
 class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
+  const NewsScreen({
+    required this.newsModel,
+    super.key,
+  });
 
-  static const id = '/news-list';
+  final NewsModel newsModel;
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: BlocProvider(
-        create: (context) => di<NewsCubit>(),
-        child: const _Page(),
-      ),
-    );
-  }
-}
-
-class _Page extends StatefulWidget {
-  const _Page();
-
-  @override
-  State<_Page> createState() => _PageState();
-}
-
-class _PageState extends State<_Page> {
-  late ScrollController scrollController;
-
-  @override
-  void initState() {
-    super.initState();
-    scrollController = ScrollController()..addListener(_scrollListener);
-    // WidgetsBinding.instance.addPostFrameCallback((_) {
-    //   Loader.instance.show(context);
-    //   context.read<NewsCubit>().loadNextPage();
-    // });
-  }
-
-  void _scrollListener() {
-    if (scrollController.position.extentAfter <= 0) {
-      context.read<NewsCubit>().loadNextPage();
-    }
-  }
+  static const id = '/news-screen';
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocListener(
-      listeners: [
-        BlocListener<NewsCubit, NewsState>(
-          listenWhen: (previous, current) =>
-              previous.loading != current.loading,
-          listener: (context, state) {
-            state.loading
-                ? Loader.instance.show(context)
-                : Loader.instance.hide();
-          },
-        ),
-        BlocListener<NewsCubit, NewsState>(
-          listenWhen: (previous, current) =>
-              previous.failure != current.failure,
-          listener: (context, state) {
-            final failure = state.failure;
-            if (failure != null) {
-              GenericErrorHandler.instance.handle(
-                failure: failure,
-                onRetry: () => context.read<NewsCubit>().retry(),
-                context: context,
-              );
-            }
-          },
-        ),
-      ],
-      child: BlocBuilder<NewsCubit, NewsState>(
-        builder: (context, state) {
-          return RefreshIndicator(
-            color: AppColors.primary,
-            onRefresh: () async {
-              await context.read<NewsCubit>().reload();
-            },
-            child: ListView.builder(
-              physics: const AlwaysScrollableScrollPhysics(),
-              controller: scrollController,
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: state.response?.news.length ?? 0,
-              itemBuilder: (context, index) => NewsCell(
-                news: state.response?.news[index],
+    return AppScreen(
+      child: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight: 280,
+            floating: true,
+            pinned: true,
+            title: Assets.imagesLogo.image(width: 40),
+            centerTitle: true,
+            backgroundColor: AppColors.primary,
+            flexibleSpace: FlexibleSpaceBar(
+              background: ImageLoader(
+                imageUrl: newsModel.image,
+                height: 400,
               ),
             ),
-          );
-        },
+            actions: [
+              IconButton(
+                onPressed: () {
+                  Alert.instance.error(context, context.l10n.not_implemented);
+                },
+                icon: const Icon(Icons.share),
+              ),
+            ],
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        newsModel.titleAr,
+                        style: const TextStyle(
+                          color: AppColors.black,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 18,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        context.l10n.sport_league,
+                        style: const TextStyle(
+                          color: AppColors.brownishGrey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        newsModel.createdAt.toString(),
+                        style: const TextStyle(
+                          color: AppColors.brownishGrey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        newsModel.contentAr,
+                        style: const TextStyle(
+                          color: AppColors.darkGrey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
-  }
-
-  void news(BuildContext context) {
-    FocusScope.of(context).unfocus();
-    context.read<NewsCubit>().loadNextPage();
   }
 }

@@ -18,7 +18,9 @@ class HomeScreen extends StatelessWidget {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return AppScreen(
-          appBar: const CustomAppBar(),
+          appBar: state.currentTab == NavigationTabs.more
+              ? null
+              : const CustomAppBar(),
           bottomNavigationBar: buildNavigationBar(state, context),
           child: state.tabWidget,
         );

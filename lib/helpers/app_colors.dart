@@ -8,7 +8,9 @@ class AppColors {
   static const black40 = Color(0x66000000);
   static const brownishGrey = Color(0xff7c7575);
   static const blueGrey = Color(0xff8e8e93);
+  static const darkGrey = Color(0xff131314);
 
   static const paleGrey = Color(0xfff3f4f7);
   static const darkGreyBlue = Color(0xff325268);
+  static const cherryRed = Color(0xffed1c24);
 }
