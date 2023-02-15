@@ -3,7 +3,9 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:news_app/data/api_manager/api_manager.dart';
 import 'package:news_app/dependacy_injection/di.dart';
+import 'package:news_app/flavor.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
@@ -22,6 +24,7 @@ class AppBlocObserver extends BlocObserver {
 }
 
 Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
+  BaseRequestDefaults.instance.baseUrl = AppFlavor.instance.baseUrl;
   initDependencyInjection();
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
