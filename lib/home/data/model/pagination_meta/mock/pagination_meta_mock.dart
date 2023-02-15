@@ -1,4 +1,4 @@
-import '../pagination_meta.dart';
+import 'package:news_app/home/data/model/pagination_meta/pagination_meta.dart';
 
 class PaginationMetaMock {
 //*this return the !same! instance every time it's called
@@ -6,6 +6,5 @@ class PaginationMetaMock {
     page: 1,
     count: 100,
     hasNextPage: false,
-    
   );
 }
