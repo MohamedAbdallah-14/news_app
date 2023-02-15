@@ -5,17 +5,17 @@ import 'package:news_app/generated/assets.gen.dart';
 import 'package:news_app/helpers/app_colors.dart';
 import 'package:news_app/helpers/generic_error_handler.dart';
 import 'package:news_app/home/logic/news/news_cubit.dart';
-import 'package:news_app/home/view/news_screen/news_screen.dart';
+import 'package:news_app/home/view/home_screen/home_screen.dart';
 
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
   static const id = '/';
 
   @override
-  State<Splash> createState() => _SplashState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashState extends State<Splash> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -30,7 +30,7 @@ class _SplashState extends State<Splash> {
           listenWhen: (previous, current) =>
               previous.response != current.response && current.response != null,
           listener: (context, state) {
-            Navigator.pushNamed(context, NewsScreen.id);
+            Navigator.pushReplacementNamed(context, HomeScreen.id);
           },
         ),
         BlocListener<NewsCubit, NewsState>(
