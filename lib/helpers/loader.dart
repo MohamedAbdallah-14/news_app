@@ -66,7 +66,11 @@ class _LoadingImageState extends State<LoadingImage> {
                 borderRadius: BorderRadius.all(Radius.circular(12)),
                 color: AppColors.white,
               ),
-              child: const CircularProgressIndicator(),
+              child: const Center(
+                child: CircularProgressIndicator(
+                  color: AppColors.primary,
+                ),
+              ),
             ),
     );
   }

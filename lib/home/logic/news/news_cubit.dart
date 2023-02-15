@@ -25,6 +25,9 @@ class NewsCubit extends Cubit<NewsState> {
     final result = await _repository.news(requestModel);
     emit(
       result.fold((failure) => state.requestFailed(failure), (response) {
+        if (response.news.isEmpty) {
+          return state.copyWith(lastPage: true, loading: false);
+        }
         if (state.response != null) {
           final newItems = [...state.response!.news, ...response.news];
           response.news.clear();
