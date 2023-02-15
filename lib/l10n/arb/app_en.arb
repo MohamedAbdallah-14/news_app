@@ -16,5 +16,13 @@
   "statistics": "Statistics",
   "not_implemented": "This Feature is not implemented yet.",
   "no_news": "No News yets.",
-  "sport_league": "Sports League"
+  "sport_league": "Sports League",
+  "clubs_directory": "Club directory",
+  "stadium_directory": "Stadium directory",
+  "who_are_we": "Who are we",
+  "regulations": "Regulations",
+  "committees": "Committees",
+  "contact_us": "Contact Us",
+  "share_app": "Share App",
+  "subscribe_to_news_letter": "Subscribe to news letter"
 }

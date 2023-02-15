@@ -16,5 +16,13 @@
   "statistics": "الاحصائيات",
   "not_implemented": "هذه الميزة لم تتفعل بعد.",
   "no_news": "لا يوجد اخبار جديدة",
-  "sport_league": "الدوري الرياضي"
+  "sport_league": "الدوري الرياضي",
+  "clubs_directory": "دليل النوادي",
+  "stadium_directory": "دليل الملاعب",
+  "who_are_we": "من نحن",
+  "regulations": "الأنظمة واللوائح",
+  "committees": "اللجان",
+  "contact_us": "اتصل بنا",
+  "share_app": "شارك التطبيق",
+  "subscribe_to_news_letter": "الاشتراك بالنشرة الاخبارية"
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/app/view/widgets/image_loader.dart';
 import 'package:news_app/helpers/app_colors.dart';
 import 'package:news_app/home/data/model/news_model/news_model.dart';
+import 'package:news_app/home/logic/language_cubit/language_cubit.dart';
 import 'package:news_app/home/view/news_screen/news_screen.dart';
 import 'package:news_app/l10n/l10n.dart';
 
@@ -47,7 +48,7 @@ class NewsCell extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    newsModel.titleAr,
+                    newsModel.title(ltr: ltr),
                     style: const TextStyle(
                       color: AppColors.black,
                       fontWeight: FontWeight.w700,
