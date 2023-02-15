@@ -7,5 +7,12 @@
   "check_your_connection": "Check your connection and try again.",
   "try_again_later": "Please try again later",
   "retry": "Retry",
-  "dismiss": "Dismiss"
+  "dismiss": "Dismiss",
+  "latest_news": "Latest news",
+  "more": "More",
+  "home": "Home",
+  "table": "Table",
+  "news": "News",
+  "statistics": "Statistics",
+  "not_implemented": "This Feature is not implemented yet."
 }
