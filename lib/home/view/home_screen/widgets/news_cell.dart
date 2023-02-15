@@ -38,7 +38,6 @@ class NewsCell extends StatelessWidget {
                     fontSize: 14,
                   ),
                   maxLines: 1,
-
                 ),
                 Text(
                   newsModel.contentAr,
