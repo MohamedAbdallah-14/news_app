@@ -1,7 +1,18 @@
 {
-    "@@locale": "ar",
-    "counterAppBarTitle": "عداد",
-    "@counterAppBarTitle": {
-        "description": "وصف عداد"
-    }
+  "@@locale": "ar",
+  "error": "خطأ",
+  "success": "تم بنجاح",
+  "no_connection": "خطأ بالاتصال",
+  "service_not_available": "الخدمة غير متاحة",
+  "check_your_connection": "برجاء التحقق من اتصالاك بالانترنت وحاول مرة اخرى",
+  "try_again_later": "برجاء المحاولة لاحقا",
+  "retry": "إعادة المحاولة",
+  "dismiss": "إلغاء",
+  "latest_news": "اخر الاخبار",
+  "more": "المزيد",
+  "home": "الرئيسية",
+  "table": "جدول الدوري",
+  "news": "المركز الاخباري",
+  "statistics": "الاحصائيات",
+  "not_implemented": "هذه الميزة لم تتفعل بعد."
 }

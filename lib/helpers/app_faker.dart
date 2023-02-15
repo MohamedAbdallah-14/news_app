@@ -35,9 +35,7 @@ class AppFaker {
     return DateTime(date.year, date.month, date.day);
   }
 
-  static String get image => AppFaker.randomBool
-      ? ''
-      : 'https://picsum.photos/100/100?random=$randomId';
+  static String get image => 'https://picsum.photos/512/512?random=$randomId';
 
   static const defaultListLength = 10;
   static List<int> get randomIdList =>

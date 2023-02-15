@@ -1,0 +1,6 @@
+{
+  "app": "news_app",
+  "feature": "home",
+  "name": "news",
+  "request_model": true
+}
