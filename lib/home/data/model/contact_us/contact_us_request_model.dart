@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:news_app/data/api_manager/api_manager.dart';
 import 'package:news_app/home/data/model/enum/message_type.dart';
 import 'package:news_app/home/data/model/parameter/email.dart';
@@ -15,7 +18,7 @@ class ContactUsRequestModel extends RequestModel {
     required this.messageTitle,
     required this.messageType,
     required this.messageDesc,
-    required this.attachment,
+    this.attachment,
     RequestProgressListener? progressListener,
   }) : super(progressListener);
 
@@ -26,7 +29,7 @@ class ContactUsRequestModel extends RequestModel {
   final MessageTitle messageTitle;
   final MessageType messageType;
   final MessageDescription messageDesc;
-  final String? attachment;
+  final File? attachment;
 
   @override
   Future<Map<String, dynamic>> toMap() async {
@@ -58,7 +61,8 @@ class ContactUsRequestModel extends RequestModel {
       ),
     };
     if (attachment != null) {
-      map['attachment'] = attachment;
+      final fileBytes = attachment!.readAsBytesSync();
+      map['attachment'] = base64Encode(fileBytes);
     }
     return map;
   }

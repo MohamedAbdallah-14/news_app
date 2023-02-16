@@ -27,7 +27,7 @@ class ContactUsState extends Equatable {
   final MessageTitle? messageTitle;
   final MessageType? messageType;
   final MessageDescription? messageDesc;
-  final String? attachment;
+  final File? attachment;
 
   bool get isFormValid {
     if (currentStep == 1) {
@@ -66,7 +66,7 @@ class ContactUsState extends Equatable {
     MessageTitle? messageTitle,
     MessageType? messageType,
     MessageDescription? messageDesc,
-    String? attachment,
+    Nullable<File?>? attachment,
   }) {
     return ContactUsState(
       currentStep: currentStep ?? this.currentStep,
@@ -80,7 +80,7 @@ class ContactUsState extends Equatable {
       messageTitle: messageTitle ?? this.messageTitle,
       messageType: messageType ?? this.messageType,
       messageDesc: messageDesc ?? this.messageDesc,
-      attachment: attachment ?? this.attachment,
+      attachment: attachment == null ? this.attachment : attachment.value,
     );
   }
 

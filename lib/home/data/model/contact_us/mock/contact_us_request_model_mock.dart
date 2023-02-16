@@ -9,8 +9,6 @@ import 'package:news_app/home/data/model/parameter/mock/name_mock.dart';
 class ContactUsRequestModelMock {
   static const messageTypeMock = MessageType.complain;
 
-  static const attachmentMock = 'base64String';
-
   static final mock = ContactUsRequestModel(
     firstName: NameMock.nameMock,
     lastName: NameMock.nameMock,
@@ -19,7 +17,6 @@ class ContactUsRequestModelMock {
     messageTitle: MessageTitleMock.messageTitleMock,
     messageType: messageTypeMock,
     messageDesc: MessageDescriptionMock.messageDescriptionMock,
-    attachment: attachmentMock,
   );
 
   static final mockInvalidFirstName = ContactUsRequestModel(
@@ -30,7 +27,6 @@ class ContactUsRequestModelMock {
     messageTitle: MessageTitleMock.messageTitleMock,
     messageType: messageTypeMock,
     messageDesc: MessageDescriptionMock.messageDescriptionMock,
-    attachment: attachmentMock,
   );
 
   static final mockInvalidLastName = ContactUsRequestModel(
@@ -41,7 +37,6 @@ class ContactUsRequestModelMock {
     messageTitle: MessageTitleMock.messageTitleMock,
     messageType: messageTypeMock,
     messageDesc: MessageDescriptionMock.messageDescriptionMock,
-    attachment: attachmentMock,
   );
 
   static final mockInvalidEmail = ContactUsRequestModel(
@@ -52,7 +47,6 @@ class ContactUsRequestModelMock {
     messageTitle: MessageTitleMock.messageTitleMock,
     messageType: messageTypeMock,
     messageDesc: MessageDescriptionMock.messageDescriptionMock,
-    attachment: attachmentMock,
   );
 
   static final mockInvalidMobile = ContactUsRequestModel(
@@ -63,7 +57,6 @@ class ContactUsRequestModelMock {
     messageTitle: MessageTitleMock.messageTitleMock,
     messageType: messageTypeMock,
     messageDesc: MessageDescriptionMock.messageDescriptionMock,
-    attachment: attachmentMock,
   );
 
   static final mockInvalidMessageTitle = ContactUsRequestModel(
@@ -74,7 +67,6 @@ class ContactUsRequestModelMock {
     messageTitle: MessageTitleMock.messageTitleMockInvalid,
     messageType: messageTypeMock,
     messageDesc: MessageDescriptionMock.messageDescriptionMock,
-    attachment: attachmentMock,
   );
 
   static final mockInvalidMessageDesc = ContactUsRequestModel(
@@ -85,6 +77,5 @@ class ContactUsRequestModelMock {
     messageTitle: MessageTitleMock.messageTitleMock,
     messageType: messageTypeMock,
     messageDesc: MessageDescriptionMock.messageDescriptionMockInvalid,
-    attachment: attachmentMock,
   );
 }

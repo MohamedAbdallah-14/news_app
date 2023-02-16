@@ -37,7 +37,7 @@ class Alert {
     current = Flushbar(
       title: context.l10n.error,
       message: (message?.isEmpty ?? true) ? 'some_thing_went_wrong' : message,
-      backgroundColor: AppColors.cherryRed,
+      backgroundColor: AppColors.deepRed,
       flushbarPosition: FlushbarPosition.TOP,
       margin: const EdgeInsets.all(12),
       borderRadius: BorderRadius.circular(12),

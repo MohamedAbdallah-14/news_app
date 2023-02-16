@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:news_app/data/api_manager/api_manager.dart';
@@ -46,8 +48,8 @@ class ContactUsCubit extends Cubit<ContactUsState> {
     );
   }
 
-  void changeStep(int step){
-    emit(state.copyWith(currentStep:step));
+  void changeStep(int step) {
+    emit(state.copyWith(currentStep: step));
   }
 
   void firstNameChanged(String value) {
@@ -78,8 +80,8 @@ class ContactUsCubit extends Cubit<ContactUsState> {
     emit(state.copyWith(messageDesc: MessageDescription(value)));
   }
 
-  void attachmentChanged(String value) {
-    emit(state.copyWith(attachment: value));
+  void attachmentChanged(File? value) {
+    emit(state.copyWith(attachment: Nullable(value)));
   }
 
   void retry() {

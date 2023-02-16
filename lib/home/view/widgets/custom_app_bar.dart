@@ -25,7 +25,20 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
               child: Assets.imagesLogo.image(),
             ),
           ),
-        )
+        ),
+        if (Navigator.canPop(context))
+          SafeArea(
+            child: Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: IconButton(
+                icon: const Icon(
+                  Icons.close,
+                  color: AppColors.white,
+                ),
+                onPressed: () => Navigator.pop(context),
+              ),
+            ),
+          ),
       ],
     );
   }
