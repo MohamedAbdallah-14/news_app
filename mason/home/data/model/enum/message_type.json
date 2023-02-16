@@ -1,0 +1,9 @@
+{
+  "feature": "home",
+  "name": "message_type",
+  "parameters": [
+    { "parameter": "complain" },
+    { "parameter": "suggestion" },
+    { "parameter": "inquery" }
+  ]
+}

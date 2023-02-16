@@ -1,5 +1,5 @@
 {
   "app": "news_app",
   "feature": "home",
-  "new_feature": false
+  "name": "message_title"
 }
