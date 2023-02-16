@@ -4,6 +4,9 @@ import 'package:mocktail/mocktail.dart';
 import 'package:news_app/data/api_manager/api_manager.dart';
 import 'package:news_app/flavor.dart';
 import 'package:news_app/home/data/home_repository.dart';
+import 'package:news_app/home/data/model/contact_us/contact_us_response_model.dart';
+import 'package:news_app/home/data/model/contact_us/mock/contact_us_request_model_mock.dart';
+import 'package:news_app/home/data/model/contact_us/mock/contact_us_response_model_mock.dart';
 import 'package:news_app/home/data/model/news/mock/news_request_model_mock.dart';
 import 'package:news_app/home/data/model/news/mock/news_response_model_mock.dart';
 import 'package:news_app/home/data/model/news/news_response_model.dart';
@@ -89,6 +92,70 @@ should return Left(ServiceNotAvailableFailure) when data apimanger throws server
     });
   });
 
+  group('ContactUs', () {
+    test('''
+should return Right(ContactUsResponseModel) when data apimanger return valid data ''',
+        () async {
+      // arrange
+      when(
+        () => apIsManager.send<ContactUsResponseModel, MessageResponseModel>(
+          request: any(named: 'request'),
+          responseFromMap: any(named: 'responseFromMap'),
+        ),
+      ).thenAnswer((_) async => Right(ContactUsResponseModelMock.mock));
+      // act
+      final result = await repository.contactUs(ContactUsRequestModelMock.mock);
+      // assert
+      expect(
+        result,
+        Right<dynamic, ContactUsResponseModel>(ContactUsResponseModelMock.mock),
+      );
+    });
+
+    test('''
+should return Left(ValidationError, MessageResponseModel) when data apimanger return invalid data ''',
+        () async {
+      // arrange
+      final failure = ErrorFailure(
+        errorStatus: ErrorStatus.validationError,
+        error: MessageResponseModel(message: 'error'),
+      );
+      when(
+        () => apIsManager.send<ContactUsResponseModel, MessageResponseModel>(
+          request: any(named: 'request'),
+          responseFromMap: any(named: 'responseFromMap'),
+        ),
+      ).thenAnswer((_) async => Left(failure));
+      // act
+      final result = await repository.contactUs(ContactUsRequestModelMock.mock);
+      // assert
+      expect(result, Left<ErrorFailure, dynamic>(failure));
+    });
+
+    test('''
+should return Left(ServiceNotAvailableFailure) when data apimanger throws server exception''',
+        () async {
+      // arrange
+      when(
+        () => apIsManager.send<ContactUsResponseModel, MessageResponseModel>(
+          request: any(named: 'request'),
+          responseFromMap: any(named: 'responseFromMap'),
+        ),
+      ).thenAnswer(
+        (_) async => Left(
+          ServiceNotAvailableFailure(
+            FailureInfo(),
+          ),
+        ),
+      );
+      // act
+      final result = await repository.contactUs(ContactUsRequestModelMock.mock);
+      dynamic value;
+      result.fold((l) => value = l, (r) => value = r);
+      // assert
+      expect(value, isA<ServiceNotAvailableFailure>());
+    });
+  });
   group('Mock Repository', () {
     setUp(() {
       AppFlavor.instance.flavor = Flavor.mock;
@@ -99,6 +166,16 @@ should return Left(ServiceNotAvailableFailure) when data apimanger throws server
       expect(
         response,
         Right<dynamic, NewsResponseModel>(NewsResponseModelMock.mock),
+      );
+    });
+
+    test('Should return ContactUsResponseModel when contactUs called',
+        () async {
+      final response =
+          await repository.contactUs(ContactUsRequestModelMock.mock);
+      expect(
+        response,
+        Right<dynamic, ContactUsResponseModel>(ContactUsResponseModelMock.mock),
       );
     });
   });
