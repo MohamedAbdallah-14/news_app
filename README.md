@@ -22,13 +22,13 @@ To run the desired flavor either use the launch configuration in VSCode/Android 
 
 ```sh
 # Development
-$ flutter run --flavor development --target lib/main_development.dart
+$ flutter run --flavor development --target lib/main/main_development.dart
 
 # mock
-$ flutter run --flavor mock --target lib/main_mock.dart
+$ flutter run --flavor mock --target lib/main/main_mock.dart
 
 # Production
-$ flutter run --flavor production --target lib/main_production.dart
+$ flutter run --flavor production --target lib/main/main_production.dart
 ```
 
 _\*News App works on iOS, Android, Web, and Windows._
