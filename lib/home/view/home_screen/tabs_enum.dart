@@ -5,3 +5,9 @@ enum NavigationTabs {
   statistics,
   more,
 }
+
+enum NewsTabs {
+  news,
+  images,
+  videos,
+}

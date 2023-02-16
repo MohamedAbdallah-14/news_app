@@ -1,27 +1,25 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'home_cubit.dart';
 
 class HomeState extends Equatable {
   const HomeState({
     required this.currentTab,
+    required this.currentNewsTab,
   });
 
   final NavigationTabs currentTab;
+  final NewsTabs currentNewsTab;
 
-  Widget get tabWidget {
-    switch (currentTab) {
-      case NavigationTabs.home:
-        return const HomeTab();
-      case NavigationTabs.table:
-        return const NotImplementedTab();
-      case NavigationTabs.news:
-        return const NewsTab();
-      case NavigationTabs.statistics:
-        return const NotImplementedTab();
-      case NavigationTabs.more:
-        return const MoreTab();
-    }
+  HomeState copyWith({
+    NavigationTabs? currentTab,
+    NewsTabs? currentNewsTab,
+  }) {
+    return HomeState(
+      currentTab: currentTab ?? this.currentTab,
+      currentNewsTab: currentNewsTab ?? this.currentNewsTab,
+    );
   }
 
   @override
-  List<Object> get props => [currentTab];
+  List<Object> get props => [currentTab, currentNewsTab];
 }
