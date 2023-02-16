@@ -17,9 +17,9 @@ class AppFlavor {
   String get baseUrl {
     switch (flavor) {
       case Flavor.production:
-        return 'https://localhost/';
+        return 'https://615d4dea12571a001720752d.mockapi.io/';
       case Flavor.dev:
-        return 'https://localhost/';
+        return 'https://615d4dea12571a001720752d.mockapi.io/';
       case Flavor.mock:
         return 'http://localhost/';
     }

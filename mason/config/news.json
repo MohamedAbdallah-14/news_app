@@ -1,0 +1,110 @@
+{
+  "app": "news_app",
+  "feature": "home",
+  "new_feature": true,
+  "name": "news",
+  "feature_list": true,
+  "form": false,
+  "custom_parameters": false,
+  "request_model": true,
+  "request_model_parameters": [
+    {
+      "parameter": "page",
+      "field": "page",
+      "type": "int",
+      "nullable": false,
+      "custom": false,
+      "enum": false
+    },
+    {
+      "parameter": "limit",
+      "field": "limit",
+      "type": "int",
+      "nullable": false,
+      "custom": false,
+      "enum": false
+    }
+  ],
+  "enums": false,
+  "models": [
+    {
+      "name": "news",
+      "response_model": true,
+      "parameters": [
+        {
+          "parameter": "news",
+          "field": "list",
+          "type": "NewsModel",
+          "custom": true,
+          "list": true
+        }
+      ]
+    },
+    {
+      "name": "news_model",
+      "response_model": false,
+      "parameters": [
+        {
+          "parameter": "id",
+          "field": "id",
+          "type": "String",
+          "custom": false,
+          "list": false,
+          "fake_id": true
+        },
+        {
+          "parameter": "titleAr",
+          "field": "title_ar",
+          "type": "String",
+          "custom": false,
+          "list": false,
+          "fake_word": true
+        },
+        {
+          "parameter": "titleEn",
+          "field": "title_ar",
+          "type": "String",
+          "custom": false,
+          "list": false,
+          "fake_word": true
+        },
+        {
+          "parameter": "contentAr",
+          "field": "content_ar",
+          "type": "String",
+          "custom": false,
+          "list": false,
+          "fake_sentence": true
+        },
+        {
+          "parameter": "contentEn",
+          "field": "content_ar",
+          "type": "String",
+          "custom": false,
+          "list": false,
+          "fake_sentence": true
+        },
+        {
+          "parameter": "image",
+          "field": "image",
+          "type": "String",
+          "custom": false,
+          "list": false,
+          "fake_image": true
+        },
+        {
+          "parameter": "createdAt",
+          "field": "createdAt",
+          "type": "DateTime",
+          "custom": false,
+          "list": false,
+          "fake_dateTime": true
+        }
+      ]
+    }
+  ],
+  "request": {
+    "path": "news",
+    "get": true
+  }
+}

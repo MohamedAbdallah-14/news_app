@@ -1,0 +1,25 @@
+{
+  "app": "news_app",
+  "feature": "home",
+  "name": "news",
+  "parameters": [
+    {
+      "parameter": "page",
+      "field": "page",
+      "type": "int",
+      "nullable": false,
+      "custom": false,
+
+      "paths": []
+    },
+    {
+      "parameter": "limit",
+      "field": "limit",
+      "type": "int",
+      "nullable": false,
+      "custom": false,
+
+      "paths": []
+    }
+  ]
+}
