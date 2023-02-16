@@ -4,6 +4,10 @@ import 'package:news_app/app/view/widgets/app_screen.dart';
 import 'package:news_app/generated/assets.gen.dart';
 import 'package:news_app/helpers/app_colors.dart';
 import 'package:news_app/home/logic/home_cubit/home_cubit.dart';
+import 'package:news_app/home/view/home_screen/tabs/home_tab.dart';
+import 'package:news_app/home/view/home_screen/tabs/more_tab.dart';
+import 'package:news_app/home/view/home_screen/tabs/news_tab.dart';
+import 'package:news_app/home/view/home_screen/tabs/not_implemented_tab.dart';
 import 'package:news_app/home/view/home_screen/tabs_enum.dart';
 import 'package:news_app/home/view/widgets/custom_app_bar.dart';
 import 'package:news_app/l10n/l10n.dart';
@@ -17,12 +21,33 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
+        Widget child;
+        switch (state.currentTab) {
+          case NavigationTabs.home:
+            child = const HomeTab();
+            break;
+          case NavigationTabs.table:
+            child = const NotImplementedTab();
+            break;
+          case NavigationTabs.news:
+            child = const NewsTab();
+            break;
+          case NavigationTabs.statistics:
+            child = const NotImplementedTab();
+            break;
+          case NavigationTabs.more:
+            child = const MoreTab();
+            break;
+        }
+
         return AppScreen(
           appBar: state.currentTab == NavigationTabs.more
               ? null
-              : const CustomAppBar(),
+              : CustomAppBar(
+                  showTabBr: state.currentTab == NavigationTabs.news,
+                ),
           bottomNavigationBar: buildNavigationBar(state, context),
-          child: state.tabWidget,
+          child: child,
         );
       },
     );
@@ -60,7 +85,7 @@ class HomeScreen extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: itemIcon(NavigationTabs.news, state.currentTab),
-          label: context.l10n.news,
+          label: context.l10n.news_center,
         ),
         BottomNavigationBarItem(
           icon: itemIcon(NavigationTabs.statistics, state.currentTab),

@@ -43,14 +43,17 @@ class ContactAppBar extends StatelessWidget with PreferredSizeWidget {
         ),
         BlocBuilder<ContactUsCubit, ContactUsState>(
           builder: (context, state) {
-            return Text(
-              state.currentStep == 1
-                  ? context.l10n.additional_information
-                  : context.l10n.send,
-              style: const TextStyle(
-                color: AppColors.brownishGrey,
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
+            return Expanded(
+              child: Text(
+                state.currentStep == 1
+                    ? context.l10n.additional_information
+                    : context.l10n.send,
+                style: const TextStyle(
+                  color: AppColors.brownishGrey,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                ),
+                maxLines: 1,
               ),
             );
           },
