@@ -9,13 +9,19 @@ class AppColors {
   static const brownishGrey = Color(0xff7c7575);
   static const blueGrey = Color(0xff8e8e93);
   static const darkGrey = Color(0xff131314);
-  // static const veryLightPink = const Color(0xffe2e2e2);
   static const strawberry = Color(0xffee383a);
   static const turtleGreen = Color(0xff70bf44);
   static const greyblue = Color(0xff6599cc);
   static const veryLightPink = Color(0xffe0e0e0);
+  static const deepRed = Color(0xffb40000);
+  static const softBlue23 = Color(0x3b7e8fd0);
+  static const brownGrey = Color(0xff909090);
+  static const battleshipGrey = Color(0xff6c6e79);
 
   static const paleGrey = Color(0xfff3f4f7);
   static const darkGreyBlue = Color(0xff325268);
-  static const cherryRed = Color(0xffed1c24);
+  static const pinkishGrey = Color(0xffbdbbbb);
+  static const veryLightBlue = Color(0xffe6e7e8);
+  static const blueyGrey = Color(0xff8f9bb3);
+  static const lightBlueGrey = Color(0xffc5cee0);
 }

@@ -1,0 +1,70 @@
+{
+  "app": "news_app",
+  "feature": "home",
+  "name": "contact_us",
+  "parameters": [
+    {
+      "parameter": "firstName",
+      "field": "firstName",
+      "type": "Name",
+      "nullable": false,
+      "custom": true,
+
+      "paths": []
+    },
+    {
+      "parameter": "lastName",
+      "field": "lastName",
+      "type": "Name",
+      "nullable": false,
+      "custom": true,
+
+      "paths": []
+    },
+    {
+      "parameter": "email",
+      "field": "email",
+      "type": "Email",
+      "nullable": false,
+      "custom": true,
+
+      "paths": []
+    },
+    {
+      "parameter": "messageTitle",
+      "field": "messageTitle",
+      "type": "MessageTitle",
+      "nullable": false,
+      "custom": true,
+
+      "paths": []
+    },
+    {
+      "parameter": "messageType",
+      "field": "messageType",
+      "type": "MessageType",
+      "nullable": false,
+      "custom": false,
+      "enum": true,
+      "paths": []
+    },
+    {
+      "parameter": "messageDesc",
+      "field": "messageDesc",
+      "type": "MessageDescription",
+      "nullable": false,
+      "custom": true,
+
+      "paths": []
+    },
+    {
+      "parameter": "attachment",
+      "field": "attachment",
+      "type": "String",
+      "nullable": true,
+      "custom": false,
+
+      "paths": []
+    }
+  ]
+}

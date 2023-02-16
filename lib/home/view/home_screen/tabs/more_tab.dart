@@ -5,6 +5,7 @@ import 'package:news_app/helpers/alert.dart';
 import 'package:news_app/helpers/app_colors.dart';
 import 'package:news_app/home/logic/language_cubit/language_cubit.dart';
 import 'package:news_app/home/view/home_screen/widgets/more_cell.dart';
+import 'package:news_app/home/view/screen/contact_us_screen.dart';
 import 'package:news_app/l10n/l10n.dart';
 
 class MoreTab extends StatelessWidget {
@@ -52,6 +53,8 @@ class MoreTab extends StatelessWidget {
                     MoreCell(
                       title: context.l10n.contact_us,
                       color: AppColors.veryLightPink,
+                      onPressed: () =>
+                          Navigator.pushNamed(context, ContactUsScreen.id),
                     ),
                     MoreCell(
                       title: context.l10n.share_app,

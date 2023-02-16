@@ -1,0 +1,110 @@
+{
+  "app": "news_app",
+  "feature": "home",
+  "new_feature": false,
+  "name": "contact_us",
+  "feature_list": false,
+  "form": true,
+  "custom_parameters": [
+    { "name": "name" },
+    { "name": "email" },
+    { "name": "mobile" },
+    { "name": "message_title" },
+    { "name": "message_description" }
+  ],
+  "request_model": true,
+  "request_model_parameters": [
+    {
+      "parameter": "firstName",
+      "field": "firstName",
+      "type": "Name",
+      "nullable": false,
+      "custom": true,
+      "enum": false
+    },
+    {
+      "parameter": "lastName",
+      "field": "lastName",
+      "type": "Name",
+      "nullable": false,
+      "custom": true,
+      "enum": false
+    },
+    {
+      "parameter": "email",
+      "field": "email",
+      "type": "Email",
+      "nullable": false,
+      "custom": true,
+      "enum": false
+    },
+    {
+      "parameter": "messageTitle",
+      "field": "messageTitle",
+      "type": "MessageTitle",
+      "nullable": false,
+      "custom": true,
+      "enum": false
+    },
+    {
+      "parameter": "messageType",
+      "field": "messageType",
+      "type": "MessageType",
+      "nullable": false,
+      "custom": false,
+      "enum": true
+    },
+    {
+      "parameter": "messageDesc",
+      "field": "messageDesc",
+      "type": "MessageDescription",
+      "nullable": false,
+      "custom": true,
+      "enum": false
+    },
+    {
+      "parameter": "attachment",
+      "field": "attachment",
+      "type": "String",
+      "nullable": true,
+      "custom": false,
+      "enum": false
+    }
+  ],
+  "enums": [
+    {
+      "name": "message_type",
+      "parameters": [
+        { "parameter": "complain" },
+        { "parameter": "suggestion" },
+        { "parameter": "inquery" }
+      ]
+    },
+    {
+      "name": "contact_us_steps",
+      "parameters": [
+        { "parameter": "info" },
+        { "parameter": "additional_info" }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "name": "contact_us",
+      "response_model": true,
+      "parameters": [
+        {
+          "parameter": "id",
+          "field": "id",
+          "type": "String",
+          "custom": false,
+          "list": false
+        }
+      ]
+    }
+  ],
+  "request": {
+    "path": "contactus",
+    "post": true
+  }
+}

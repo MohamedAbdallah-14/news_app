@@ -1,0 +1,4 @@
+enum ContactUsSteps {
+  info,
+  additionalInfo,
+}

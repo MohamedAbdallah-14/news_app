@@ -1,0 +1,8 @@
+{
+  "app": "news_app",
+  "feature": "home",
+  "name": "contact_us",
+  "request_model": true,
+  "path": "contactus",
+  "post": true
+}
