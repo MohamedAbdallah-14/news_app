@@ -19,7 +19,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
-  logger: ^1.1.0
+  logger: ^1.2.2
   path_provider: ^2.0.12
   pretty_dio_logger: ^1.1.1
 
