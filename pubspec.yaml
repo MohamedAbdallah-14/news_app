@@ -24,7 +24,7 @@ dependencies:
   pretty_dio_logger: ^1.1.1
 
 dev_dependencies:
-  bloc_test: ^9.1.1
+  bloc_test: ^9.1.2
   build_runner:
   flutter_gen_runner:
   flutter_test:
