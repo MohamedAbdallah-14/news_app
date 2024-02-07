@@ -54,7 +54,7 @@ class _MessageTypeSelectorState extends State<MessageTypeSelector> {
                         .messageTypeChanged(messageType!);
                     Navigator.pop(context);
                   },
-          )
+          ),
         ],
       ),
     );

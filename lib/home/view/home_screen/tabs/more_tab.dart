@@ -116,7 +116,7 @@ class MoreTab extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                               fontSize: 15,
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),

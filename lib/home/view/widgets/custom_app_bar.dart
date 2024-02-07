@@ -6,7 +6,7 @@ import 'package:news_app/home/logic/home_cubit/home_cubit.dart';
 import 'package:news_app/home/view/home_screen/tabs_enum.dart';
 import 'package:news_app/l10n/l10n.dart';
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     this.showTabBr = false,
     super.key,

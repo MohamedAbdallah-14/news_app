@@ -4,7 +4,7 @@ import 'package:news_app/helpers/app_colors.dart';
 import 'package:news_app/home/logic/contact_us/contact_us_cubit.dart';
 import 'package:news_app/l10n/l10n.dart';
 
-class ContactAppBar extends StatelessWidget with PreferredSizeWidget {
+class ContactAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ContactAppBar({super.key});
 
   @override
@@ -29,7 +29,7 @@ class ContactAppBar extends StatelessWidget with PreferredSizeWidget {
               width: MediaQuery.of(context).size.width / 2,
               margin: const EdgeInsets.only(top: 16),
               color: AppColors.primary,
-            )
+            ),
           ],
         ),
         const Spacer(),
@@ -58,7 +58,7 @@ class ContactAppBar extends StatelessWidget with PreferredSizeWidget {
             );
           },
         ),
-        const SizedBox(width: 16)
+        const SizedBox(width: 16),
       ],
     );
   }

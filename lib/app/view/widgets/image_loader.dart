@@ -79,7 +79,7 @@ class ImageLoader extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
         ],
       ),
     );

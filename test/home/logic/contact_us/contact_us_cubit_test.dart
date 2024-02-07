@@ -68,7 +68,7 @@ messageTitleChanged should instantiate new instance of MessageTitle into state a
     expect: () => [
       ContactUsState(
         messageTitle: MessageTitle(MessageTitleMock.messageTitleInvalid),
-      )
+      ),
     ],
     verify: (ContactUsCubit cubit) {
       expect(cubit.state.isFormValid, false);
@@ -85,7 +85,7 @@ messageDescChanged should instantiate new instance of MessageDesc into state and
         messageDesc: MessageDescription(
           MessageDescriptionMock.messageDescriptionInvalid,
         ),
-      )
+      ),
     ],
     verify: (ContactUsCubit cubit) {
       expect(cubit.state.isFormValid, false);
