@@ -30,7 +30,7 @@ class TitleWithMoreButton extends StatelessWidget {
           TextButton(
             onPressed: onPressed,
             child: Text(context.l10n.more),
-          )
+          ),
         ],
       ),
     );

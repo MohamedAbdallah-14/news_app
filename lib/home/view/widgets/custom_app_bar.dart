@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/generated/assets.gen.dart';
 import 'package:news_app/helpers/app_colors.dart';
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
 
   @override

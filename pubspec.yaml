@@ -4,8 +4,8 @@ version: 1.0.0+1
 publish_to: none
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
-  flutter: 3.7.3
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: 3.16.6
 
 dependencies:
   another_flushbar: ^1.12.29
@@ -24,7 +24,7 @@ dependencies:
   flutter_svg: ^2.0.1
   get_it: ^7.2.0
   hydrated_bloc: ^9.1.0
-  intl: ^0.17.0
+  intl: ^0.18.1
   logger: ^1.1.0
   path_provider: ^2.0.12
   pretty_dio_logger: ^1.1.1

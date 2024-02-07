@@ -122,7 +122,7 @@ class _Page extends StatelessWidget {
                   },
                 ),
               ),
-            )
+            ),
           ],
           bottom: const ContactAppBar(),
         ),

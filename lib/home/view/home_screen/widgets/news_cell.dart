@@ -68,7 +68,7 @@ class NewsCell extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
