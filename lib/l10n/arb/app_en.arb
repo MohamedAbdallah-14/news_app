@@ -12,7 +12,7 @@
   "more": "More",
   "home": "Home",
   "table": "Table",
-  "news": "News",
+  "news_center": "News",
   "statistics": "Statistics",
   "not_implemented": "This Feature is not implemented yet.",
   "no_news": "No News yets.",
@@ -58,5 +58,8 @@
   "choose": "Choose",
   "close": "Close",
   "request_sent": "Request has been sent successfully",
-  "request_number": "Request number: "
+  "request_number": "Request number: ",
+  "news": "News",
+  "images": "Images",
+  "videos": "Videos"
 }
