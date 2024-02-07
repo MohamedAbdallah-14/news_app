@@ -13,13 +13,13 @@
 // import 'package:news_app/core/view/widgets/buttons/app_button.dart';
 // import 'package:news_app/di/injection_container.dart';
 // import 'package:news_app/l10n/l10n.dart';
-// import 'package:news_app/home/data/model/parameter/mock/name_mock.dart'; 
-// import 'package:news_app/home/data/model/parameter/mock/name_mock.dart'; 
-// import 'package:news_app/home/data/model/parameter/mock/email_mock.dart'; 
-// import 'package:news_app/home/data/model/parameter/mock/message_title_mock.dart'; 
-// import 'package:news_app/home/data/model/parameter/mock/message_type_mock.dart'; 
-// import 'package:news_app/home/data/model/parameter/mock/message_description_mock.dart'; 
-// import 'package:news_app/home/data/model/parameter/mock/string_mock.dart'; 
+// import 'package:news_app/home/data/model/parameter/mock/name_mock.dart';
+// import 'package:news_app/home/data/model/parameter/mock/name_mock.dart';
+// import 'package:news_app/home/data/model/parameter/mock/email_mock.dart';
+// import 'package:news_app/home/data/model/parameter/mock/message_title_mock.dart';
+// import 'package:news_app/home/data/model/parameter/mock/message_type_mock.dart';
+// import 'package:news_app/home/data/model/parameter/mock/message_description_mock.dart';
+// import 'package:news_app/home/data/model/parameter/mock/string_mock.dart';
 // import 'package:news_app/home/data/model/contact_us/mock/contact_us_response_model_mock.dart';
 // import 'package:news_app/home/view/screen/contact_us_screen.dart';
 
@@ -48,7 +48,7 @@
 
 //     testWidgets(
 //       '''
-//       Given user entered valid form 
+//       Given user entered valid form
 //       then submit button should be activated if valid''',
 //       (WidgetTester tester) async {
 //         await tester.runAsync(() async {
@@ -229,7 +229,7 @@
 
 //     testWidgets(
 //       '''
-//       Given user entered valid form 
+//       Given user entered valid form
 //       When repository returns ConnectionFailure
 //       Then Retry Dialog Should be Presented''',
 //       (WidgetTester tester) async {
@@ -281,44 +281,43 @@
 //   });
 // }
 
-
-// const _firstNameKey = Key('contact_us_text_field_first_name'); 
-// const _lastNameKey = Key('contact_us_text_field_last_name'); 
-// const _emailKey = Key('contact_us_text_field_email'); 
-// const _messageTitleKey = Key('contact_us_text_field_message_title'); 
-// const _messageTypeKey = Key('contact_us_text_field_message_type'); 
-// const _messageDescKey = Key('contact_us_text_field_message_desc'); 
-// const _attachmentKey = Key('contact_us_text_field_attachment'); 
+// const _firstNameKey = Key('contact_us_text_field_first_name');
+// const _lastNameKey = Key('contact_us_text_field_last_name');
+// const _emailKey = Key('contact_us_text_field_email');
+// const _messageTitleKey = Key('contact_us_text_field_message_title');
+// const _messageTypeKey = Key('contact_us_text_field_message_type');
+// const _messageDescKey = Key('contact_us_text_field_message_desc');
+// const _attachmentKey = Key('contact_us_text_field_attachment');
 // const _contactUsKey = Key('contact_us_button');
 
 // Future<void> enterValidForm(WidgetTester tester) async {
-// // act 
-//   await tester.enterText(find.byKey(_firstNameKey), NameMock.name); 
-//   await tester.enterText(find.byKey(_lastNameKey), NameMock.name); 
-//   await tester.enterText(find.byKey(_emailKey), EmailMock.email); 
-//   await tester.enterText(find.byKey(_messageTitleKey), MessageTitleMock.messageTitle); 
-//   await tester.enterText(find.byKey(_messageTypeKey), MessageTypeMock.messageType); 
-//   await tester.enterText(find.byKey(_messageDescKey), MessageDescriptionMock.messageDescription); 
-//   await tester.enterText(find.byKey(_attachmentKey), StringMock.string); 
+// // act
+//   await tester.enterText(find.byKey(_firstNameKey), NameMock.name);
+//   await tester.enterText(find.byKey(_lastNameKey), NameMock.name);
+//   await tester.enterText(find.byKey(_emailKey), EmailMock.email);
+//   await tester.enterText(find.byKey(_messageTitleKey), MessageTitleMock.messageTitle);
+//   await tester.enterText(find.byKey(_messageTypeKey), MessageTypeMock.messageType);
+//   await tester.enterText(find.byKey(_messageDescKey), MessageDescriptionMock.messageDescription);
+//   await tester.enterText(find.byKey(_attachmentKey), StringMock.string);
 //   await tester.pumpAndSettle();
 // }
 
 // Future<void> assertValidForm(
 //     WidgetTester tester, BuildContext context) async {
-//   // assert 
-//   expect(find.text(context.l10n.invalid_name), findsNothing); 
-//   expect(find.text(context.l10n.invalid_name), findsNothing); 
-//   expect(find.text(context.l10n.invalid_email), findsNothing); 
-//   expect(find.text(context.l10n.invalid_message_title), findsNothing); 
-//   expect(find.text(context.l10n.invalid_message_type), findsNothing); 
-//   expect(find.text(context.l10n.invalid_message_description), findsNothing); 
-//   expect(find.text(context.l10n.invalid_string), findsNothing); 
+//   // assert
+//   expect(find.text(context.l10n.invalid_name), findsNothing);
+//   expect(find.text(context.l10n.invalid_name), findsNothing);
+//   expect(find.text(context.l10n.invalid_email), findsNothing);
+//   expect(find.text(context.l10n.invalid_message_title), findsNothing);
+//   expect(find.text(context.l10n.invalid_message_type), findsNothing);
+//   expect(find.text(context.l10n.invalid_message_description), findsNothing);
+//   expect(find.text(context.l10n.invalid_string), findsNothing);
 //   final contactUsButton = tester.widget<AppButton>(find.byKey(_contactUsKey));
 //   expect(contactUsButton.onpressed, isNotNull);
 // }
 
 // Future<void> enterInValidForm(WidgetTester tester) async {
-// // act 
+// // act
 //   await tester.enterText(find.byKey(_firstNameKey), NameMock.nameInvalid);
 
 //   await tester.enterText(find.byKey(_lastNameKey), NameMock.nameInvalid);
@@ -338,14 +337,14 @@
 
 // Future<void> assertInValidForm(
 //     WidgetTester tester, BuildContext context) async {
-//   // assert 
-//   expect(find.text(context.l10n.invalid_name), findsOneWidget); 
-//   expect(find.text(context.l10n.invalid_name), findsOneWidget); 
-//   expect(find.text(context.l10n.invalid_email), findsOneWidget); 
-//   expect(find.text(context.l10n.invalid_message_title), findsOneWidget); 
-//   expect(find.text(context.l10n.invalid_message_type), findsOneWidget); 
-//   expect(find.text(context.l10n.invalid_message_description), findsOneWidget); 
-//   expect(find.text(context.l10n.invalid_string), findsOneWidget); 
+//   // assert
+//   expect(find.text(context.l10n.invalid_name), findsOneWidget);
+//   expect(find.text(context.l10n.invalid_name), findsOneWidget);
+//   expect(find.text(context.l10n.invalid_email), findsOneWidget);
+//   expect(find.text(context.l10n.invalid_message_title), findsOneWidget);
+//   expect(find.text(context.l10n.invalid_message_type), findsOneWidget);
+//   expect(find.text(context.l10n.invalid_message_description), findsOneWidget);
+//   expect(find.text(context.l10n.invalid_string), findsOneWidget);
 //   final contactUsButton = tester.widget<AppButton>(find.byKey(_contactUsKey));
 //   expect(contactUsButton.onpressed, isNull);
 // }
