@@ -20,7 +20,6 @@ class AppLogger {
       _logger.log(
         logLevel.toLevel(),
         message,
-        stackTrace,
       );
     }
   }
@@ -40,7 +39,7 @@ extension LogLevelExtention on LogLevel? {
     switch (this) {
       case null:
       case LogLevel.verbose:
-        return Level.verbose;
+        return Level.trace;
       case LogLevel.debug:
         return Level.debug;
       case LogLevel.info:
@@ -50,7 +49,7 @@ extension LogLevelExtention on LogLevel? {
       case LogLevel.error:
         return Level.error;
       case LogLevel.nothing:
-        return Level.nothing;
+        return Level.off;
     }
   }
 }

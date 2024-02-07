@@ -15,7 +15,7 @@ dependencies:
   dio: ^4.0.6
   equatable: ^2.0.5
   faker: ^2.1.0
-  file_picker: ^5.2.5
+  file_picker: ^6.1.1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
@@ -25,7 +25,7 @@ dependencies:
   get_it: ^7.2.0
   hydrated_bloc: ^9.1.0
   intl: ^0.18.1
-  logger: ^1.1.0
+  logger: ^2.0.2+1
   path_provider: ^2.0.12
   pretty_dio_logger: ^1.1.1
 
@@ -35,8 +35,8 @@ dev_dependencies:
   flutter_gen_runner: null
   flutter_test:
     sdk: flutter
-  mocktail: 0.2.0
-  very_good_analysis: ^4.0.0
+  mocktail: ^1.0.3
+  very_good_analysis: ^5.1.0
 
 flutter:
   uses-material-design: true
